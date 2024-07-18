@@ -1,23 +1,26 @@
-import { Container, Header } from "semantic-ui-react"
+import { Container, Divider, Header } from "semantic-ui-react"
 
 const Contact = () =>
 (
     <Container text>
-        <Header as='h2'>Contact</Header>
+        <Header as='h2'>Contact Me</Header>
+        <Divider />
         <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-            Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+            If you want to know more about my portraits or would like to commission
+            a drawing please contact me. I would love to hear from you.
         </p>
+        <Header as='h3' textAlign='center'>
+            Email:&nbsp;
+            <a target='_blank' rel='noopener noreferrer' href='mailto:melnicholas72%40gmail.com?Subject=Portrait%20Enquiry'>
+                melnicholas72@gmail.com
+            </a>
+        </Header>
+        <Header as='h3' textAlign='center'>
+            Phone:&nbsp;
+            <a target='_blank' rel='noopener noreferrer' href='tel:+441225862785'>
+                01225 862785
+            </a>
+        </Header>
     </Container>
 )
 
