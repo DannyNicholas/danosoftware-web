@@ -1,24 +1,46 @@
-import { Container, Header } from "semantic-ui-react"
+import { useRef, useState } from "react";
+import PhotoAlbum from "react-photo-album";
+import { Container, Divider, Header } from "semantic-ui-react";
+import Lightbox from "yet-another-react-lightbox";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import "yet-another-react-lightbox/plugins/captions.css";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import "yet-another-react-lightbox/styles.css";
 
-const Gallery = () =>
-(
-    <Container text>
-        <Header as='h2'>Gallery</Header>
-        <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-            Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-            dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-        </p>
-    </Container>
-)
+import { Thumbnails } from "yet-another-react-lightbox/plugins";
+import { Photos } from "../config/Gallery";
+
+const Gallery = () => {
+
+    const captionsRef = useRef(null)
+    const slideshowRef = useRef(null)
+    const thumbnailsRef = useRef(null)
+    const [index, setIndex] = useState(-1)
+
+    return (
+        <Container text>
+            <Header as='h2'>Gallery</Header>
+            <Divider />
+            <p>
+                Please click on a picture to see the drawing in more detail.
+            </p>
+            <PhotoAlbum layout="rows"
+                photos={Photos}
+                onClick={({ index: current }) => setIndex(current)}
+            />
+            <Lightbox
+                index={index}
+                slides={Photos}
+                open={index >= 0}
+                close={() => setIndex(-1)}
+                plugins={[Captions, Slideshow, Thumbnails]}
+                thumbnails={{ ref: thumbnailsRef }}
+                captions={{ ref: captionsRef }}
+                slideshow={{ ref: slideshowRef }}
+            />
+        </Container>
+    )
+}
 
 export default Gallery
