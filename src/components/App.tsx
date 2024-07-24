@@ -1,4 +1,3 @@
-import './App.css'
 import AppFooter from './AppFooter'
 import AppHeader from './AppHeader'
 import AppPage from './AppPage'

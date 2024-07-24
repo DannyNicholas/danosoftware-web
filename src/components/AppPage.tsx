@@ -6,14 +6,14 @@ const AppPage = () => {
 
     const desktopStyle = {
         backgroundColor: '#fff',
-        margin: '3em 0em 0em',
-        padding: '3em 0em',
+        margin: '0em 0em 0em',
+        padding: '0em 0em',
     }
 
     const mobileStyle = {
         backgroundColor: '#fff',
-        margin: '1em 0em 0em',
-        padding: '3em 0em',
+        margin: '0em 0em 0em',
+        padding: '0em 0em',
     }
 
     return (
