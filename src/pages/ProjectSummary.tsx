@@ -1,6 +1,7 @@
 import { Container, Divider, Grid, Header } from "semantic-ui-react"
-import ExampleLink from "../components/ProjectLink"
+import ProjectLink from "../components/PageLink"
 import { Projects } from "../config/Projects"
+import { PROJECTS_ROUTE } from "../constants/Constants"
 
 const ProjectSummary = () => (
     <>
@@ -18,7 +19,7 @@ const ProjectSummary = () => (
                     .sort((a, b) => a.header.localeCompare(b.header))
                     .map(
                         (item, index) => (
-                            <ExampleLink {...item} key={index} />
+                            <ProjectLink content={{ ...item }} url={`${PROJECTS_ROUTE}/${item.id}`} key={index} />
                         )
                     )}
             </Grid >

@@ -1,26 +1,26 @@
-import { useLayoutEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { Button, Container, Divider, Grid, GridColumn, GridRow, Header, Image, Label } from "semantic-ui-react"
-import ProjectLink from "../components/PageLink"
-import { Projects } from "../config/Projects"
-import { PROJECTS_ROUTE } from "../constants/Constants"
+import { PrivacyPolicies } from "../config/PrivacyPolicies"
+import { HOME_ROUTE, PROJECTS_ROUTE } from "../constants/Constants"
 import { ButtonContent, ContentType, ImageContent, PageContent, TextContent } from "../types/Content"
 
-const Project = () => {
-
-    // ensure we scroll to top of page when opening a new Project page
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0)
-    })
+const PrivacyPolicy = () => {
 
     const { id } = useParams()
     const navigate = useNavigate()
 
-    // extract content for chosen Project page
-    // throw an error if user has navigated to an unrecognised Project
-    const content: PageContent | undefined = Projects.find(item => item.id === id)
+    // extract content for chosen PrivacyPolicy page
+    // throw an error if user has navigated to an unrecognised PrivacyPolicy
+    const content: PageContent | undefined = PrivacyPolicies.find(item => item.id === id)
     if (typeof content === "undefined") {
-        throw new Error(`Project '${id}' not found.`)
+        throw new Error(`Privacy Policy '${id}' not found.`)
+    }
+
+    // create a back button to go back to the equivalent project page
+    const backButton: ButtonContent = {
+        type: ContentType.Button,
+        caption: 'Back ...',
+        url: id === undefined ? `${HOME_ROUTE}` : `${PROJECTS_ROUTE}/${id}`
     }
 
     const ImageComponent = ({ image }: { image: ImageContent }) => {
@@ -45,7 +45,6 @@ const Project = () => {
             </GridRow>
         )
     }
-
 
     const ButtonComponent = ({ button }: { button: ButtonContent }) => {
         return (
@@ -81,24 +80,11 @@ const Project = () => {
                             }
                         }
                     )}
-                </Grid>
-                <Header as='h2'>Other Projects</Header>
-                <Divider />
-                <p>Click below to see other Projects of my work</p>
-                {/* show a sorted list of other Project pages excluding the current page */}
-                <Grid stackable>
-                    {Projects
-                        .filter(item => item.id !== content.id)
-                        .sort((a, b) => a.header.localeCompare(b.header))
-                        .map(
-                            (item, index) => (
-                                <ProjectLink content={{ ...item }} url={`${PROJECTS_ROUTE}/${item.id}`} key={index} />
-                            )
-                        )}
+                    <ButtonComponent button={backButton} />
                 </Grid>
             </Container>
         </>
     )
 }
 
-export default Project
+export default PrivacyPolicy

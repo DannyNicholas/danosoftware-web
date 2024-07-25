@@ -31,7 +31,7 @@ const ErrorPage = () => {
 
   return (
     <>
-      <div className="background-image">
+      <div className="app-background">
         <MediaContextProvider>
           <AppHeader />
           <AppTitle />
