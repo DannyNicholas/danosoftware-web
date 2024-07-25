@@ -1,7 +1,7 @@
 import PlutoPanicIcon from "../assets/projects/pluto-panic/icon.png"
 import { ContentType, PageContent } from "../types/Content"
 
-// holds content for each project page
+// holds content for each project's privacy policy
 export const PrivacyPolicies: PageContent[] = [
     {
         id: 'pluto-panic',
