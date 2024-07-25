@@ -1,0 +1,8 @@
+.app-background {
+    background-color: #ffffff;
+}
+
+/* Fills-in any empty space below the footer if the page length is small */
+body {
+    background-color: #1b1c1d;
+}

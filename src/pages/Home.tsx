@@ -9,7 +9,7 @@ const Home = () => {
 
     return (
         <>
-            <Segment style={{ padding: '2em 0em' }} vertical>
+            <Segment vertical>
                 <Grid container stackable verticalAlign='middle'>
                     <Grid.Row>
                         <Grid.Column width={8}>

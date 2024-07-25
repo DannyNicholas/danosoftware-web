@@ -1,3 +1,4 @@
+import './App.css'
 import AppFooter from './AppFooter'
 import AppHeader from './AppHeader'
 import AppPage from './AppPage'
@@ -6,7 +7,7 @@ import { MediaContextProvider } from './Media'
 
 const App = () => (
   <>
-    <div className="background-image">
+    <div className="app-background">
       <MediaContextProvider>
         <AppHeader />
         <AppTitle />
