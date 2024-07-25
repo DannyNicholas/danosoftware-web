@@ -1,28 +1,60 @@
-import { Link } from "react-router-dom"
-import { Container, Divider, Header } from "semantic-ui-react"
+import { Container, Divider, Grid, Header, Image } from "semantic-ui-react"
+import Me from "../assets/me/me.png"
 
-const About = () =>
-(
-    <Container text>
-        <Header as='h2'>About Me</Header>
-        <Divider />
-        <p>
-            I live in the beautiful Wiltshire town of Bradford on Avon with my husband,
-            two children and one-eyed cat <Link to={'/examples/george'}>George</Link>, who features in my gallery of portraits.
-            As well as drawing I love sewing and creating lovely things for my home.
-        </p>
-        <p>
-            I'm never happier than when I am transforming a blank page of paper
-            or a piece of fabric into something beautiful and unique.
-            I enjoy country walks and bike rides with my family, spending time with friends,
-            holidays by the sea and pottering in my garden.
-        </p>
-        <p>
-            I would like to thank my wonderful husband Dan for his love,
-            help, support and for setting up my website.
-            Without him I'm not sure I would ever have joined the technology age!
-        </p>
-    </Container>
-)
+const About = () => {
+    const LeftImage = () => (
+        <Image
+            floated='left'
+            size='medium'
+            src={Me}
+        />
+    )
+
+
+
+    return (
+
+
+        < Container text >
+            <Header as='h2'>About Me</Header>
+            <Divider />
+            <LeftImage />
+            <p>
+                Hello there... I'm Danny. I live in the beautiful Wiltshire town of Bradford on Avon with my gorgeous wife Mel,
+                two cheeky kids and multiple cats.
+            </p>
+
+
+            <Grid>
+                <Grid.Column width={12}>
+                    <p>
+                        Hello there... I'm Danny. I live in the beautiful Wiltshire town of Bradford on Avon with my gorgeous wife Mel,
+                        two cheeky kids and multiple cats.
+                    </p>
+                    <p>
+                        Hello there... I'm Danny. I live in the beautiful Wiltshire town of Bradford on Avon with my gorgeous wife Mel,
+                        two cheeky kids and multiple cats.
+                    </p>
+                    <p>
+                        Hello there... I'm Danny. I live in the beautiful Wiltshire town of Bradford on Avon with my gorgeous wife Mel,
+                        two cheeky kids and multiple cats.
+                    </p>
+                </Grid.Column>
+                <Grid.Column floated='right' width={4}>
+                    <Image circular size='medium' src={Me} />
+                </Grid.Column>
+            </Grid>
+
+            <p>
+                I started out in mobile telecoms after graduating in Electronic
+            </p>
+            <p>
+                I would like to thank my wonderful husband Dan for his love,
+                help, support and for setting up my website.
+                Without him I'm not sure I would ever have joined the technology age!
+            </p>
+        </Container >
+    )
+}
 
 export default About

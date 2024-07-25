@@ -1,5 +1,5 @@
 import { Container, Divider, Grid, GridColumn, Header, Icon, Image, List, Segment } from "semantic-ui-react"
-import FooterImage from '../assets/pets/oscar/oscar-icon.jpg'
+import FooterImage from '../assets/projects/pluto-panic/icon.png'
 import { MediaProps, MediaType } from "../types/Media"
 import { Media } from "./Media"
 
@@ -21,24 +21,19 @@ const AppFooter = () => {
         <Segment inverted style={isMobile ? mobileStyle : desktopStyle} vertical>
           <Container textAlign='center'>
             <Grid verticalAlign='middle' stackable divided={isMobile ? undefined : true} inverted padded >
-              <GridColumn width={8} textAlign={isMobile ? 'center' : 'right'}>
+              <GridColumn width={16} textAlign={'center'}>
                 <Header as={isMobile ? 'h3' : 'h2'} inverted>
-                  <Image circular src={FooterImage} /> Melanie Nicholas
-                </Header>
-              </GridColumn>
-              <GridColumn width={8} textAlign={isMobile ? 'center' : 'left'}>
-                <Header as={isMobile ? 'h3' : 'h2'} inverted>
-                  Animal Portrait Artist
+                  <Image circular src={FooterImage} />Dano Software
                 </Header>
               </GridColumn>
             </Grid>
             <Divider inverted section />
             <List horizontal inverted divided link size='medium'>
-              <List.Item as='a' target='_blank' rel='noopener noreferrer' href='mailto:melnicholas72%40gmail.com?Subject=Portrait%20Enquiry'>
+              <List.Item as='a' target='_blank' rel='noopener noreferrer' href='mailto:dan%40danosoftware.com?Subject=Hello%20there'>
                 <Icon name='mail' />
                 E-Mail
               </List.Item>
-              <List.Item as='a' target='_blank' rel='noopener noreferrer' href='https://twitter.com/melnicholas72'>
+              <List.Item as='a' target='_blank' rel='noopener noreferrer' href='https://twitter.com/danosworld72'>
                 <Icon name='twitter' />
                 Twitter
               </List.Item>
@@ -48,7 +43,6 @@ const AppFooter = () => {
       </>
     )
   }
-
 
   return (
     <>

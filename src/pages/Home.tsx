@@ -1,65 +1,61 @@
-import { Link } from "react-router-dom"
-import { Container, Divider, Grid, GridColumn, GridRow, Header, Image, Label } from "semantic-ui-react"
-import Merlin from "../assets/pets/merlin/merlin-1024.jpg"
-import Mitzy from "../assets/pets/mitzy/mitzy-1024.jpg"
-import Tommy from "../assets/pets/tommy/tommy-1024.jpg"
+import { useNavigate } from "react-router-dom"
+import { Button, Divider, Grid, Header, Image, Segment } from "semantic-ui-react"
+import Icon from "../assets/projects/pluto-panic/icon.png"
+import { PROJECTS_ROUTE } from "../constants/Constants"
 
-const Home = () => (
-    <Container text >
-        <Header as='h2'>Home</Header>
-        <Divider />
+const Home = () => {
 
-        <Grid verticalAlign='middle' stackable >
-            <GridRow>
-                <GridColumn width={8} textAlign='left'>
-                    <Image src={Merlin} fluid />
-                    <Label>Merlin</Label>
-                </GridColumn>
-                <GridColumn width={8}>
-                    <p>
-                        Welcome to my website.
-                    </p>
-                    <p>
-                        I am an animal portrait artist who completed Merlin, my <Link to={'/examples/merlin'}>first drawing</Link>,
-                        22 years ago.  All my portraits are completed using pencil for a beautifully detailed drawing.
-                    </p>
-                </GridColumn>
-            </GridRow>
-            <GridRow>
-                <GridColumn width={8}>
-                    <p>
-                        I love being able to capture the unique character of each animal I draw, from the texture of the fur to the detail of the eyes and nose.
-                    </p>
-                    <p>
-                        It's very rewarding to be able to make a plain piece of paper come to life.
-                        But the most satisfying aspect of what I do is hearing from my happy customers and knowing I have created something very special for them.
-                    </p>
-                </GridColumn>
-                <GridColumn width={8} textAlign='left'>
-                    <Image src={Mitzy} fluid />
-                    <Label>Mitzy</Label>
-                </GridColumn>
-            </GridRow>
-            <GridRow>
-                <GridColumn width={8} textAlign='left'>
-                    <Image src={Tommy} fluid />
-                    <Label>Tommy</Label>
-                </GridColumn>
-                <GridColumn width={8}>
-                    <Header as='h3'>Customer Reviews</Header>
-                    <p>
-                        <i>"We gave the portrait to Mollie's owners this week and they were absolutely delighted, with tears in their eyes … so many many many thanks for a great drawing."</i>
-                    </p>
-                    <p>
-                        <i>"Thank you very much for the portrait of Tommy, it has had lots of admirers."</i>
-                    </p>
-                    <p>
-                        <i>"We absolutely love the drawing of Soldus. You captured her beautiful brown eyes perfectly."</i>
-                    </p>
-                </GridColumn>
-            </GridRow>
-        </Grid>
-    </Container >
-)
+    const navigate = useNavigate()
+
+    return (
+        <>
+            <Segment vertical>
+                <Grid container stackable verticalAlign='middle'>
+                    <Grid.Row>
+                        <Grid.Column width={8}>
+                            <Header as='h3' style={{ fontSize: '2em' }}>
+                                Welcome to Dano Software
+                            </Header>
+                            <p style={{ fontSize: '1.33em' }}>
+                                Hi, I'm Danny, a software developer.
+                                I've created a website with my projects and stuff.
+                            </p>
+                            <Header as='h3' style={{ fontSize: '2em' }}>
+                                What kind of stuff do you do?
+                            </Header>
+                            <p style={{ fontSize: '1.33em' }}>
+                                I like to dabble with anything that involves brackets or semi-colons.
+                                This website is a place to share some of my projects.
+                            </p>
+                        </Grid.Column>
+                        <Grid.Column floated='right' width={6}>
+                            <Image bordered rounded size='large' src={Icon} />
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+
+                <Divider
+                    as='h4'
+                    className='header'
+                    horizontal
+                    style={{ margin: '3em 0em', textTransform: 'uppercase' }}
+                >
+                    <a href='#'>Projects</a>
+                </Divider>
+
+                <Header as='h3' style={{ fontSize: '2em' }}>
+                    Shall we look at some projects?
+                </Header>
+                <p style={{ fontSize: '1.33em' }}>
+                    Why not take a look at some of my projects...
+                    what's the worst that could happen?
+                </p>
+                <Button as='a' size='large' onClick={() => navigate(`${PROJECTS_ROUTE}`)}>
+                    Let's go...
+                </Button>
+            </Segment >
+        </>
+    )
+}
 
 export default Home

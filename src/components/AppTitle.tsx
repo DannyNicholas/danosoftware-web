@@ -4,11 +4,11 @@ import { Media } from "./Media"
 
 const AppTitle = () => {
 
-    const name = 'MELANIE NICHOLAS'
-    const occupation = 'Animal Portrait Artist'
+    const title = 'Dano Software'
+    const subTitle = 'Building stuff since the 1980s'
 
     const hugeText = {
-        fontSize: '4em',
+        fontSize: '5em',
         fontWeight: 'normal',
         marginBottom: '0.5em',
         marginTop: '1em',
@@ -20,7 +20,7 @@ const AppTitle = () => {
     }
 
     const largeText = {
-        fontSize: '3em',
+        fontSize: '2em',
         fontWeight: 'normal',
         marginBottom: '1em',
         marginTop: '0.5em',
@@ -36,11 +36,11 @@ const AppTitle = () => {
         return (
             <>
                 <Container text >
-                    <Header className='text-outline' size='huge' textAlign='center' inverted style={isMobile ? hugeTextMobile : hugeText}>
-                        {name}
+                    <Header size='huge' textAlign='center' style={isMobile ? hugeTextMobile : hugeText}>
+                        {title}
                     </Header>
-                    <Header className='text-outline' size='large' textAlign='center' inverted style={isMobile ? largeTextMobile : largeText}>
-                        {occupation}
+                    <Header size='small' textAlign='center' style={isMobile ? largeTextMobile : largeText}>
+                        {subTitle}
                     </Header>
                 </Container>
             </>

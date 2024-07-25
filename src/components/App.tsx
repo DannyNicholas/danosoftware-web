@@ -7,7 +7,7 @@ import { MediaContextProvider } from './Media'
 
 const App = () => (
   <>
-    <div className="background-image">
+    <div className="app-background">
       <MediaContextProvider>
         <AppHeader />
         <AppTitle />
