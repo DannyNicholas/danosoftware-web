@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
     // create a back button to go back to the equivalent project page
     const backButton: ButtonContent = {
         type: ContentType.Button,
-        caption: 'Back ...',
+        caption: id === undefined ? 'Home' : 'Back ...',
         url: id === undefined ? `${HOME_ROUTE}` : `${PROJECTS_ROUTE}/${id}`
     }
 

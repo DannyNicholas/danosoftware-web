@@ -23,26 +23,31 @@ const Project = () => {
         throw new Error(`Project '${id}' not found.`)
     }
 
+    const showOtherProjects: boolean = Projects.length > 1
+
     return (
         <>
             <Container text>
 
                 <Page content={content} />
 
-                <Header as='h2'>Other Projects</Header>
-                <Divider />
-                <p>Click below to see other Projects of my work</p>
-                {/* show a sorted list of other Project pages excluding the current page */}
-                <Grid stackable>
-                    {Projects
-                        .filter(item => item.id !== content.id)
-                        .sort((a, b) => a.header.localeCompare(b.header))
-                        .map(
-                            (item, index) => (
-                                <PageLink content={{ ...item }} url={`${PROJECTS_ROUTE}/${item.id}`} key={index} />
-                            )
-                        )}
-                </Grid>
+                {showOtherProjects && <>
+                    <Header as='h2'>Other Projects</Header>
+                    <Divider />
+                    <p>Click below to see other Projects of my work</p>
+                    {/* show a sorted list of other Project pages excluding the current page */}
+                    <Grid stackable>
+                        {Projects
+                            .filter(item => item.id !== content.id)
+                            .sort((a, b) => a.header.localeCompare(b.header))
+                            .map(
+                                (item, index) => (
+                                    <PageLink content={{ ...item }} url={`${PROJECTS_ROUTE}/${item.id}`} key={index} />
+                                )
+                            )}
+                    </Grid>
+                </>
+                }
             </Container>
         </>
     )
