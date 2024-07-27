@@ -1,5 +1,5 @@
 import { Container, Divider, Grid, Header } from "semantic-ui-react"
-import ProjectLink from "../components/PageLink"
+import ProjectLink from "../components/pages/PageLink"
 import { Projects } from "../config/Projects"
 import { PROJECTS_ROUTE } from "../constants/Constants"
 

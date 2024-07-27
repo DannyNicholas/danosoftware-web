@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { GridColumn, Header, Image, Segment } from "semantic-ui-react";
-import { PageContent } from "../types/Content";
+import { PageContent } from "../../types/Content";
 
 export type PageLinkProps = {
     readonly content: PageContent,

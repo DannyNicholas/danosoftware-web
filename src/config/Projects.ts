@@ -1,5 +1,4 @@
 import PlutoPanicIcon from "../assets/projects/pluto-panic/icon.png"
-import { PRIVACY_ROUTE } from "../constants/Constants"
 import { ContentType, PageContent } from "../types/Content"
 
 // holds content for each project page
@@ -24,9 +23,8 @@ export const Projects: PageContent[] = [
                 caption: 'Pluto Panico'
             },
             {
-                type: ContentType.Button,
+                type: ContentType.PrivacyPolicyButton,
                 caption: 'Privacy Policy',
-                url: `${PRIVACY_ROUTE}/pluto-panic`
             },
         ]
     },
