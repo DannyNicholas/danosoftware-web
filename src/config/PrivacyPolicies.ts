@@ -27,8 +27,8 @@ export const PrivacyPolicies: PageContent[] = [
             {
                 type: ContentType.Bullets,
                 list: [
-                    'To analyze game performance and user behavior in aggregate.',
-                    'To provide and improve the game experience.',
+                    'We may use anonymous aggregated user behavior to analyse game performance.',
+                    'We may use anonymous data to improve the game experience.',
                 ]
             },
             {
@@ -79,7 +79,7 @@ export const PrivacyPolicies: PageContent[] = [
             {
                 type: ContentType.Bullets,
                 list: [
-                    'We may update this policy and will post any changes here.',
+                    'If we update this policy, we will post any changes here.',
                 ]
             },
             {
