@@ -1,12 +1,17 @@
 export const enum ContentType {
-    Text, Image, Button, PrivacyPolicyButton
+    Text, Image, Button, PrivacyPolicyButton, Bullets, Header
 }
 
 export type PageContent = {
     readonly id: string,
     readonly header: string,
     readonly icon: string,
-    readonly structure: (ImageContent | TextContent | ButtonContent | PrivacyPolicyButtonContent)[],
+    readonly structure: (HeaderContent | ImageContent | TextContent | ButtonContent | PrivacyPolicyButtonContent | BulletsContent)[],
+}
+
+export type HeaderContent = {
+    readonly type: ContentType.Header,
+    readonly text: string,
 }
 
 export type ImageContent = {
@@ -30,4 +35,9 @@ export type ButtonContent = {
 export type PrivacyPolicyButtonContent = {
     readonly type: ContentType.PrivacyPolicyButton,
     readonly caption: string,
+}
+
+export type BulletsContent = {
+    readonly type: ContentType.Bullets,
+    readonly list: string[],
 }
