@@ -24,7 +24,7 @@ export const Projects: PageContent[] = [
             },
             {
                 type: ContentType.PrivacyPolicyButton,
-                caption: 'Privacy Policy',
+                caption: 'Click to see our Privacy Policy',
             },
         ]
     },

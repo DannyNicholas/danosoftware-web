@@ -6,7 +6,7 @@ import { ContentType, PageContent } from "../types/Content"
 export const PrivacyPolicies: PageContent[] = [
     {
         id: 'pluto-panic',
-        header: 'Pluto Panic - Privacy Policy',
+        header: 'Pluto Panic : Our Privacy Policy',
         icon: PlutoPanicIcon,
         structure: [
             {
@@ -80,11 +80,8 @@ export const PrivacyPolicies: PageContent[] = [
                 type: ContentType.Bullets,
                 list: [
                     'If we update this policy, we will post any changes here.',
+                    'This policy was last updated on 1st August 2024.',
                 ]
-            },
-            {
-                type: ContentType.Header,
-                text: 'Last updated: July 2024'
             },
             {
                 type: ContentType.Image,

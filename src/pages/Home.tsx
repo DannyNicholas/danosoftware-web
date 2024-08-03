@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
-import { Button, Divider, Grid, Header, Image, Segment } from "semantic-ui-react"
-import Icon from "../assets/projects/pluto-panic/icon.png"
+import { Button, Divider, Grid, Header, Icon, Image, Segment } from "semantic-ui-react"
+import AppIcon from "../assets/projects/pluto-panic/icon.png"
 import { PROJECTS_ROUTE } from "../constants/Constants"
 
 const Home = () => {
@@ -29,7 +29,7 @@ const Home = () => {
                             </p>
                         </Grid.Column>
                         <Grid.Column floated='right' width={6}>
-                            <Image bordered rounded size='large' src={Icon} />
+                            <Image bordered rounded size='large' src={AppIcon} />
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
@@ -50,9 +50,14 @@ const Home = () => {
                     Why not take a look at some of my projects...
                     what's the worst that could happen?
                 </p>
-                <Button as='a' size='large' onClick={() => navigate(`${PROJECTS_ROUTE}`)}>
-                    Let's go...
-                </Button>
+                <Grid>
+                    <Grid.Column textAlign="center">
+                        <Button primary as='a' size='large' onClick={() => navigate(`${PROJECTS_ROUTE}`)}>
+                            <Icon name='play' />
+                            Let's go...
+                        </Button>
+                    </Grid.Column>
+                </Grid>
             </Segment >
         </>
     )
