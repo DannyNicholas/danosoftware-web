@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
 
     return (
         <>
-            <Container text>
+            <Container>
                 <Page content={content} />
                 <Grid>
                     <ButtonComponent button={backButton} />

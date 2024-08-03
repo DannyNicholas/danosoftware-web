@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react"
 import { useParams } from "react-router-dom"
-import { Container, Divider, Grid, Header } from "semantic-ui-react"
+import { Container, Grid, Header } from "semantic-ui-react"
 import Page from "../components/pages/Page"
 import PageLink from "../components/pages/PageLink"
 import { Projects } from "../config/Projects"
@@ -27,13 +27,12 @@ const Project = () => {
 
     return (
         <>
-            <Container text>
+            <Container>
 
                 <Page content={content} />
 
                 {showOtherProjects && <>
-                    <Header as='h2'>Other Projects</Header>
-                    <Divider />
+                    <Header as='h3'>Other Projects</Header>
                     <p>Click below to see other Projects of my work</p>
                     {/* show a sorted list of other Project pages excluding the current page */}
                     <Grid stackable>

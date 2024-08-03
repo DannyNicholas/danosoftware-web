@@ -13,17 +13,17 @@ const Home = () => {
                 <Grid container stackable verticalAlign='middle'>
                     <Grid.Row>
                         <Grid.Column width={8}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3'>
                                 Welcome to Dano Software
                             </Header>
-                            <p style={{ fontSize: '1.33em' }}>
+                            <p>
                                 Hi, I'm Danny, a software developer.
                                 I've created a website with my projects and stuff.
                             </p>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3'>
                                 What kind of stuff do you do?
                             </Header>
-                            <p style={{ fontSize: '1.33em' }}>
+                            <p>
                                 I like to dabble with anything that involves brackets or semi-colons.
                                 This website is a place to share some of my projects.
                             </p>
@@ -40,13 +40,13 @@ const Home = () => {
                     horizontal
                     style={{ margin: '3em 0em', textTransform: 'uppercase' }}
                 >
-                    <a href='#'>Projects</a>
+                    Projects
                 </Divider>
 
-                <Header as='h3' style={{ fontSize: '2em' }}>
+                <Header as='h3'>
                     Shall we look at some projects?
                 </Header>
-                <p style={{ fontSize: '1.33em' }}>
+                <p>
                     Why not take a look at some of my projects...
                     what's the worst that could happen?
                 </p>
