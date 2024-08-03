@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react"
 import { useParams } from "react-router-dom"
-import { Container, Grid } from "semantic-ui-react"
+import { Container } from "semantic-ui-react"
 import ButtonComponent from "../components/pages/ButtonComponent"
 import Page from "../components/pages/Page"
 import { PrivacyPolicies } from "../config/PrivacyPolicies"
@@ -26,17 +26,15 @@ const PrivacyPolicy = () => {
     // create a back button to go back to the equivalent project page
     const backButton: ButtonContent = {
         type: ContentType.Button,
-        caption: id === undefined ? 'Home' : 'Back ...',
+        caption: id === undefined ? 'Home' : 'Back to Project...',
         url: id === undefined ? `${HOME_ROUTE}` : `${PROJECTS_ROUTE}/${id}`
     }
 
     return (
         <>
-            <Container text>
+            <Container>
                 <Page content={content} />
-                <Grid>
-                    <ButtonComponent button={backButton} />
-                </Grid>
+                <ButtonComponent button={backButton} />
             </Container>
         </>
     )

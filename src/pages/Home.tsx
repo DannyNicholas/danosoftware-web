@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
-import { Button, Divider, Grid, Header, Image, Segment } from "semantic-ui-react"
-import Icon from "../assets/projects/pluto-panic/icon.png"
+import { Button, Divider, Grid, Header, Icon, Image, Segment } from "semantic-ui-react"
+import AppIcon from "../assets/projects/pluto-panic/icon.png"
 import { PROJECTS_ROUTE } from "../constants/Constants"
 
 const Home = () => {
@@ -13,23 +13,23 @@ const Home = () => {
                 <Grid container stackable verticalAlign='middle'>
                     <Grid.Row>
                         <Grid.Column width={8}>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3'>
                                 Welcome to Dano Software
                             </Header>
-                            <p style={{ fontSize: '1.33em' }}>
+                            <p>
                                 Hi, I'm Danny, a software developer.
                                 I've created a website with my projects and stuff.
                             </p>
-                            <Header as='h3' style={{ fontSize: '2em' }}>
+                            <Header as='h3'>
                                 What kind of stuff do you do?
                             </Header>
-                            <p style={{ fontSize: '1.33em' }}>
+                            <p>
                                 I like to dabble with anything that involves brackets or semi-colons.
                                 This website is a place to share some of my projects.
                             </p>
                         </Grid.Column>
                         <Grid.Column floated='right' width={6}>
-                            <Image bordered rounded size='large' src={Icon} />
+                            <Image bordered rounded size='large' src={AppIcon} />
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
@@ -40,19 +40,24 @@ const Home = () => {
                     horizontal
                     style={{ margin: '3em 0em', textTransform: 'uppercase' }}
                 >
-                    <a href='#'>Projects</a>
+                    Projects
                 </Divider>
 
-                <Header as='h3' style={{ fontSize: '2em' }}>
+                <Header as='h3'>
                     Shall we look at some projects?
                 </Header>
-                <p style={{ fontSize: '1.33em' }}>
+                <p>
                     Why not take a look at some of my projects...
                     what's the worst that could happen?
                 </p>
-                <Button as='a' size='large' onClick={() => navigate(`${PROJECTS_ROUTE}`)}>
-                    Let's go...
-                </Button>
+                <Grid style={{ padding: '1em' }}>
+                    <Grid.Column textAlign="center">
+                        <Button primary as='a' size='large' onClick={() => navigate(`${PROJECTS_ROUTE}`)}>
+                            <Icon name='play' />
+                            Let's go...
+                        </Button>
+                    </Grid.Column>
+                </Grid>
             </Segment >
         </>
     )

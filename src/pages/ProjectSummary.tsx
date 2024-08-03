@@ -1,18 +1,17 @@
-import { Container, Divider, Grid, Header } from "semantic-ui-react"
+import { Container, Grid, Header } from "semantic-ui-react"
 import ProjectLink from "../components/pages/PageLink"
 import { Projects } from "../config/Projects"
 import { PROJECTS_ROUTE } from "../constants/Constants"
 
 const ProjectSummary = () => (
     <>
-        <Container text>
-            <Header as='h2'>My Projects</Header>
-            <Divider />
+        <Container>
+            <Header as='h3'>My Projects</Header>
             <p>
-                Here are some Projects projects
+                Here are some of my projects.
             </p>
             <p>
-                Click on each project to dig a little deeper.
+                Click on each project button to dig a little deeper.
             </p>
             <Grid stackable>
                 {Projects

@@ -1,4 +1,4 @@
-import { Divider, Grid, Header } from "semantic-ui-react"
+import { Header, Segment } from "semantic-ui-react"
 import { BulletsContent, ButtonContent, ContentType, HeaderContent, ImageContent, PageContent, PrivacyPolicyButtonContent, TextContent } from "../../types/Content"
 import BulletsComponent from "./BulletsComponent"
 import ButtonComponent from "./ButtonComponent"
@@ -9,9 +9,8 @@ import TextComponent from "./TextComponent"
 
 const Page = ({ content }: { content: PageContent }) => (
     <>
-        <Header as='h2'>{content.header}</Header>
-        <Divider />
-        <Grid verticalAlign='middle' stackable >
+        <Segment vertical>
+            <Header as='h3'>{content.header}</Header>
             {content.structure.map(
                 (item, index) => {
                     if (item.type === ContentType.Header) {
@@ -40,7 +39,7 @@ const Page = ({ content }: { content: PageContent }) => (
                     }
                 }
             )}
-        </Grid>
+        </Segment>
     </>
 )
 

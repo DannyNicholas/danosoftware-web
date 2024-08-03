@@ -6,3 +6,18 @@
 body {
     background-color: #1b1c1d;
 }
+
+p,
+.ui.bulleted.list {
+    font-size: 1.33em;
+    line-height: 1.6em;
+    padding-bottom: 1em;
+}
+
+h3.ui.header {
+    font-size: 2em;
+}
+
+h4.ui.header {
+    font-size: 1.5em;
+}

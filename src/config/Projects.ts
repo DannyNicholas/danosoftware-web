@@ -10,7 +10,12 @@ export const Projects: PageContent[] = [
         structure: [
             {
                 type: ContentType.Text,
-                text: 'Pluto Panic is here!',
+                text: 'Pluto Panic is an Android mobile game inspired by the many\
+                space invader games that I used to play as a kid.',
+            },
+            {
+                type: ContentType.Text,
+                text: 'Pluto Panic will be available in the Google Play Store very soon.',
             },
             {
                 type: ContentType.Image,
@@ -18,13 +23,8 @@ export const Projects: PageContent[] = [
                 caption: 'Pluto Panic'
             },
             {
-                type: ContentType.Image,
-                image: PlutoPanicIcon,
-                caption: 'Pluto Panico'
-            },
-            {
                 type: ContentType.PrivacyPolicyButton,
-                caption: 'Privacy Policy',
+                caption: 'Click to see our Privacy Policy',
             },
         ]
     },

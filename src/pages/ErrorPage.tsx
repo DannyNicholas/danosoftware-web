@@ -1,6 +1,6 @@
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 
-import { Container, Divider, Header } from "semantic-ui-react";
+import { Container, Header } from "semantic-ui-react";
 import AppFooter from "../components/AppFooter.tsx";
 import AppHeader from '../components/AppHeader.tsx';
 import AppTitle from "../components/AppTitle.tsx";
@@ -23,22 +23,15 @@ const ErrorPage = () => {
     errorMessage = 'Unknown error';
   }
 
-  const style = {
-    backgroundColor: '#fff',
-    margin: '3em 0em 0em',
-    padding: '3em 0em',
-  }
-
   return (
     <>
       <div className="app-background">
         <MediaContextProvider>
           <AppHeader />
           <AppTitle />
-          <Container style={style}>
-            <Container text>
-              <Header as='h2'>Oops!</Header>
-              <Divider />
+          <Container>
+            <Container>
+              <Header as='h3'>Oops!</Header>
               <p>Sorry, an unexpected error has occurred.</p>
               <p>
                 <i>{errorMessage}</i>
