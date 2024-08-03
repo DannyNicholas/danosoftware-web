@@ -10,6 +10,8 @@ body {
 p,
 .ui.bulleted.list {
     font-size: 1.33em;
+    line-height: 1.6em;
+    padding-bottom: 1em;
 }
 
 h3.ui.header {

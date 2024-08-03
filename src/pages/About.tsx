@@ -13,6 +13,7 @@ const About = () => {
             floated='left'
             size={size}
             src={Me}
+            style={{ padding: '0.5em' }}
         />
     )
 
@@ -30,28 +31,24 @@ const About = () => {
                 <LeftImage size={'small'} />
             </Media>
             <p>
-                Hello there... I'm Danny. I live in the beautiful Wiltshire town of Bradford on Avon with my gorgeous wife Mel,
-                two cheeky kids and multiple cats.
+                Hello there... I'm Danny. I was born and bred in that London but now
+                live in the beautiul county of Wiltshire.
             </p>
             <p>
-                Hello there... I'm Danny. I live in the beautiful Wiltshire town of Bradford on Avon with my gorgeous wife Mel,
-                two cheeky kids and multiple cats.
+                I've been coding in some form or another since I was 11.
+                I started by copying and adapting other people's games before starting to
+                dabble with my own ideas.
             </p>
             <p>
-                Hello there... I'm Danny. I live in the beautiful Wiltshire town of Bradford on Avon with my gorgeous wife Mel,
-                two cheeky kids and multiple cats.
+                It all started on an Acorn Electron in 1983. I wrote games, simulations
+                and a school dating agency app (that's a story for another day).
             </p>
             <p>
-                Hello there... I'm Danny. I live in the beautiful Wiltshire town of Bradford on Avon with my gorgeous wife Mel,
-                two cheeky kids and multiple cats.
+                After many years of selling my soul to the telecommunications industry, I came back to
+                software development after studying Java with the Open University.
             </p>
             <p>
-                I started out in mobile telecoms after graduating in Electronic
-            </p>
-            <p>
-                I would like to thank my wonderful husband Dan for his love,
-                help, support and for setting up my website.
-                Without him I'm not sure I would ever have joined the technology age!
+                I now work for a software consultancy in Bristol and haven't looked back...
             </p>
         </Container >
     )

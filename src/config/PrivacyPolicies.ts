@@ -59,7 +59,7 @@ export const PrivacyPolicies: PageContent[] = [
                 type: ContentType.Bullets,
                 list: [
                     'Our game is suitable for children under 13.',
-                    'We do not knowingly collect any personal information from children.',
+                    'We do not collect any personal information from children.',
                 ]
             },
             {
@@ -79,7 +79,7 @@ export const PrivacyPolicies: PageContent[] = [
             {
                 type: ContentType.Bullets,
                 list: [
-                    'If we update this policy, we will post any changes here.',
+                    'We will post any changes to our policies here.',
                     'This policy was last updated on 1st August 2024.',
                 ]
             },

@@ -8,10 +8,10 @@ const ProjectSummary = () => (
         <Container>
             <Header as='h3'>My Projects</Header>
             <p>
-                Here are some Projects projects
+                Here are some of my projects.
             </p>
             <p>
-                Click on each project to dig a little deeper.
+                Click on each project button to dig a little deeper.
             </p>
             <Grid stackable>
                 {Projects

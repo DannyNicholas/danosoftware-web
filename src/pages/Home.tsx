@@ -50,7 +50,7 @@ const Home = () => {
                     Why not take a look at some of my projects...
                     what's the worst that could happen?
                 </p>
-                <Grid>
+                <Grid style={{ padding: '1em' }}>
                     <Grid.Column textAlign="center">
                         <Button primary as='a' size='large' onClick={() => navigate(`${PROJECTS_ROUTE}`)}>
                             <Icon name='play' />
