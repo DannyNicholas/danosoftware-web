@@ -25,3 +25,12 @@ h4.ui.header {
 h5.ui.header {
     font-size: 1.2em;
 }
+
+/* Mobile drop-down mwnu */
+.ui.dropdown {
+    font-size: 1.3rem;
+}
+
+.ui.dropdown .menu>.item {
+    font-size: 1.3rem;
+}
