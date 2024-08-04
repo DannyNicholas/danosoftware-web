@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { Button, Divider, Grid, Header, Icon, Image, Segment } from "semantic-ui-react"
+import { Button, Container, Divider, Grid, Header, Icon, Image } from "semantic-ui-react"
 import AppIcon from "../assets/projects/pluto-panic/icon.png"
 import { PROJECTS_ROUTE } from "../constants/Constants"
 
@@ -9,7 +9,7 @@ const Home = () => {
 
     return (
         <>
-            <Segment vertical>
+            <Container>
                 <Grid container stackable verticalAlign='middle'>
                     <Grid.Row>
                         <Grid.Column width={8}>
@@ -58,7 +58,7 @@ const Home = () => {
                         </Button>
                     </Grid.Column>
                 </Grid>
-            </Segment >
+            </Container >
         </>
     )
 }
