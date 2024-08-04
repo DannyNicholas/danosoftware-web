@@ -22,7 +22,7 @@ const AppFooter = () => {
           <Container textAlign='center'>
             <Grid verticalAlign='middle' stackable divided={isMobile ? undefined : true} inverted padded >
               <GridColumn width={16} textAlign={'center'}>
-                <Header as={isMobile ? 'h3' : 'h2'} inverted>
+                <Header as={isMobile ? 'h5' : 'h4'} inverted>
                   <Image circular src={FooterImage} />Dano Software
                 </Header>
               </GridColumn>

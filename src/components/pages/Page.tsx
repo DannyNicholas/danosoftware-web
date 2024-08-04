@@ -1,4 +1,4 @@
-import { Header, Segment } from "semantic-ui-react"
+import { Container, Header } from "semantic-ui-react"
 import { BulletsContent, ButtonContent, ContentType, HeaderContent, ImageContent, PageContent, PrivacyPolicyButtonContent, TextContent } from "../../types/Content"
 import BulletsComponent from "./BulletsComponent"
 import ButtonComponent from "./ButtonComponent"
@@ -9,7 +9,7 @@ import TextComponent from "./TextComponent"
 
 const Page = ({ content }: { content: PageContent }) => (
     <>
-        <Segment vertical>
+        <Container>
             <Header as='h3'>{content.header}</Header>
             {content.structure.map(
                 (item, index) => {
@@ -39,7 +39,7 @@ const Page = ({ content }: { content: PageContent }) => (
                     }
                 }
             )}
-        </Segment>
+        </Container>
     </>
 )
 
