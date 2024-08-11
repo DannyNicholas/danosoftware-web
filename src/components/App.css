@@ -34,9 +34,3 @@ h5.ui.header {
 .ui.dropdown .menu>.item {
     font-size: 1.3rem;
 }
-
-/* Reduce padding between stacked columns */
-/* Shrinks footer when using stacked columns on mobile */
-.ui.container>.ui.stackable.grid>.column {
-    padding-bottom: 0 !important;
-}
