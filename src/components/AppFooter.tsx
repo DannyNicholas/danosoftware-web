@@ -1,5 +1,5 @@
-import { Container, Divider, Grid, GridColumn, Header, Icon, Image, List, Segment } from "semantic-ui-react"
-import FooterImage from '../assets/projects/pluto-panic/icon.png'
+import { Container, Divider, Grid, Header, Icon, Image, List, Segment } from "semantic-ui-react"
+import FooterImage from '../assets/me/me.png'
 import { MediaProps, MediaType } from "../types/Media"
 import { Media } from "./Media"
 
@@ -7,11 +7,16 @@ const AppFooter = () => {
 
   const desktopStyle = {
     margin: '5em 0em 0em',
-    padding: '3em 0em'
+    padding: '2em 0em'
   }
 
   const mobileStyle = {
-    margin: '2em 0em 0em'
+    margin: '1em 0em 0em'
+  }
+
+  const mobileDividerStyle = {
+    marginTop: '1em',
+    marginBottom: '1em'
   }
 
   const FormattedFooter = ({ media }: MediaProps) => {
@@ -20,14 +25,20 @@ const AppFooter = () => {
       <>
         <Segment inverted style={isMobile ? mobileStyle : desktopStyle} vertical>
           <Container textAlign='center'>
-            <Grid verticalAlign='middle' stackable divided={isMobile ? undefined : true} inverted padded >
-              <GridColumn width={16} textAlign={'center'}>
+
+            <Grid verticalAlign='middle' divided inverted >
+              <Grid.Column width={8} textAlign='center'>
+                <Image circular size={isMobile ? 'mini' : 'tiny'} src={FooterImage} floated='right' />
+              </Grid.Column>
+              <Grid.Column width={8} textAlign='left'>
                 <Header as={isMobile ? 'h5' : 'h4'} inverted>
-                  <Image circular src={FooterImage} />Dano Software
+                  Dano Software
                 </Header>
-              </GridColumn>
+              </Grid.Column>
             </Grid>
-            <Divider inverted section />
+
+            <Divider inverted section style={isMobile ? mobileDividerStyle : {}} />
+
             <List horizontal inverted divided link size='medium'>
               <List.Item as='a' target='_blank' rel='noopener noreferrer' href='mailto:dan%40danosoftware.com?Subject=Hello%20there'>
                 <Icon name='mail' />
