@@ -40,7 +40,7 @@ const AppFooter = () => {
             <Divider inverted section style={isMobile ? mobileDividerStyle : {}} />
 
             <List horizontal inverted divided link size='medium'>
-              <List.Item as='a' target='_blank' rel='noopener noreferrer' href='mailto:dan%40danosoftware.com?Subject=Hello%20there'>
+              <List.Item as='a' target='_blank' rel='noopener noreferrer' href='mailto:hello%40danosoftware.com?Subject=Hello%20there'>
                 <Icon name='mail' />
                 E-Mail
               </List.Item>
