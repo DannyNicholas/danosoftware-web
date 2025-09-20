@@ -5,15 +5,6 @@ import { Media } from "./Media"
 
 const AppFooter = () => {
 
-  const desktopStyle = {
-    margin: '5em 0em 0em',
-    padding: '2em 0em'
-  }
-
-  const mobileStyle = {
-    margin: '1em 0em 0em'
-  }
-
   const mobileDividerStyle = {
     marginTop: '1em',
     marginBottom: '1em'
@@ -23,7 +14,7 @@ const AppFooter = () => {
     const isMobile: boolean = media === MediaType.Mobile
     return (
       <>
-        <Segment inverted style={isMobile ? mobileStyle : desktopStyle} vertical>
+        <Segment inverted vertical>
           <Container textAlign='center'>
 
             <Grid verticalAlign='middle' divided inverted >

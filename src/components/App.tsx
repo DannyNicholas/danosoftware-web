@@ -6,16 +6,18 @@ import AppTitle from './AppTitle'
 import { MediaContextProvider } from './Media'
 
 const App = () => (
-  <>
-    <div className="app-background">
-      <MediaContextProvider>
-        <AppHeader />
-        <AppTitle />
+  <div className="page-container background-image">
+    <MediaContextProvider>
+      <AppHeader />
+      <AppTitle />
+      <main className="content">
         <AppPage />
+      </main>
+      <footer className="footer">
         <AppFooter />
-      </MediaContextProvider>
-    </div>
-  </>
+      </footer>
+    </MediaContextProvider>
+  </div>
 )
 
 export default App

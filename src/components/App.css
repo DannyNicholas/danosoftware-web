@@ -2,11 +2,6 @@
     background-color: #ffffff;
 }
 
-/* Fills-in any empty space below the footer if the page length is small */
-body {
-    background-color: #1b1c1d;
-}
-
 p,
 .ui.bulleted.list {
     font-size: 1.33em;
@@ -33,4 +28,28 @@ h5.ui.header {
 
 .ui.dropdown .menu>.item {
     font-size: 1.3rem;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.page-container {
+    /* full viewport height */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content takes available space */
+.content {
+    flex: 1;
+}
+
+/* Footer stays at bottom if content is short */
+.footer {
+    background: #1b1c1d;
+    padding: 1rem;
 }
